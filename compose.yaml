@@ -11,6 +11,8 @@ services:
   server:
     build:
       context: .
+    env_file:
+      - bot-tokens.env
     environment:
       NODE_ENV: production
     ports:

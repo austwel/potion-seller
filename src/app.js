@@ -1,14 +1,4 @@
-import 'dotenv/config';
-import express, { response } from 'express';
-import {
-  InteractionType,
-  InteractionResponseType,
-  InteractionResponseFlags,
-  MessageComponentTypes,
-  ButtonStyleTypes,
-} from 'discord-interactions';
-import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utils.js';
-import { getShuffledOptions, getResult } from './game.js';
+import { DiscordRequest } from './utils.js';
 
 const cc_schedule = ['Palaistra 🡪 VH', 'Volcanic 🡪 CC', 'Clockwork 🡪 PL', 'Palaistra 🡪 C9', 'Cloud Nine 🡪 RS', 'Red Sands 🡪 PL']
 const fl_schedule = ['Shatter 🡪 Onsal', 'Onsal 🡪 Seize', 'Seize 🡪 Shatter']
