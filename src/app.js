@@ -1,7 +1,7 @@
 import { DiscordRequest } from './utils.js';
 
-const cc_schedule = ['Palaistra 🡪 VH', 'Volcanic 🡪 CC', 'Clockwork 🡪 PL', 'Palaistra 🡪 C9', 'Cloud Nine 🡪 RS', 'Red Sands 🡪 PL']
-const fl_schedule = ['Shatter 🡪 Onsal', 'Onsal 🡪 Seize', 'Seize 🡪 Shatter']
+const cc_schedule = ['Palaistra → VH', 'Volcanic → CC', 'Clockwork → PL', 'Palaistra → C9', 'Cloud Nine → RS', 'Red Sands → PL']
+const fl_schedule = ['Shatter → Onsal', 'Onsal → Seal Rock', 'Seal Rock → Shatter']
 
 let retry = 0
 let error = null
@@ -17,7 +17,7 @@ while(true) {
 
   console.log(`${cc_schedule[now]} (${90-into_map}m)`)
   try{
-    await DiscordRequest('/channels/1181079831581044756', {
+    await DiscordRequest(`/channels/${process.env.CC_CHANNEL}`, {
       method: 'PATCH',
       body: {
         name: `${cc_schedule[now]} (${90-into_map}m)`
@@ -42,7 +42,7 @@ while(true) {
 
     console.log(`${fl_schedule[day]} (${24-into_day}h)`)
     try{
-      await DiscordRequest('/channels/1181079865194201179', {
+      await DiscordRequest(`/channels/${process.env.FL_CHANNEL}`, {
         method: 'PATCH',
         body: {
           name: `${fl_schedule[day]} (${24-into_day}h)`

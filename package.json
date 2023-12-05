@@ -1,6 +1,6 @@
 {
   "name": "getting-started",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord example app",
   "main": "app.js",
   "type": "module",
